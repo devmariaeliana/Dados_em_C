@@ -16,19 +16,19 @@
      ptr_float = &pi;
      ptr_char = &ch; 
 
-Usando os operadores de referência "&" e desreferência "*":
+//Usando os operadores de referência "&" e desreferência "*":
 
   int *ptr;
 
-Atribuição de endereço ao ponteiro ptr:
+//Atribuição de endereço ao ponteiro ptr:
 
   ptr = &num;
 
-Imprimir o endereço da váriavel:
+//Imprimir o endereço da váriavel:
 
   printf("Endereço de num: %p\n", &num);
 
-Imprimir o endereço armazenado no ponteiro:
+//Imprimir o endereço armazenado no ponteiro:
   
   printf("Endereço armazenado em ptr: %p\n", ptr);
 
@@ -36,7 +36,7 @@ return 0; */
 
 //Compilando o exemplo:
 
-int main (){
+/*int main (){
 
   int num = 42;
   int *ptr = &num;
@@ -51,4 +51,24 @@ int main (){
   printf("Novo valor de num: %d\n", num);
 
 return 0;
+}*/
+
+//Para incrementar um valor ao apontador em num:
+
+void incrementar(int *num) {
+    (*num)++;
+}
+ 
+int main (){
+
+  int num = 42;
+  
+  printf("Valor original de num: %d\n", num);
+  
+incrementar(&num);
+
+  printf("Novo valor de num: %d\n", num);
+  
+return 0;
+
 }
